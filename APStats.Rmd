@@ -1,0 +1,259 @@
+---
+title: "Answers to questions about biostatistics"
+subtitle: "(that you've never even asked)"
+author: "Philip Boonstra"
+date: "May 22, 2024"
+geometry: margin=0.5in
+output: 
+  ioslides_presentation:
+    transition: 0.1
+    css: ~/Desktop/Work/CV/Styles/temp_fancy_logo_only_first.css
+    includes:
+      in_header: ~/Desktop/Work/CV/Styles/slides_header.html
+    incremental: no
+    widescreen: true
+    logo: ~/Desktop/Work/CV/Styles/Biostat-informal.png
+    slide_level: 2
+bibliography: ../Styles/references.bib  
+---
+
+```{r setup, include=FALSE}
+library(tidyverse); 
+library(broom);
+#library(DiagrammeR);
+library(sandwich)
+library(haven)
+library(mgcv)
+library(MatchIt)
+knitr::opts_chunk$set(echo = T, warning = F, message = F);
+knitr::knit_hooks$set(mysize = function(before, options, envir) {
+  if (before) 
+    return(options$size);
+})
+options(digits = 3);
+figure_scaler = 5/8;#1/2 for ioslides; ~1/3 for word, pdf
+text_scaler = 1;#1 for ioslides; 2/3 for word, pdf
+fig.x = 16 * figure_scaler;
+fig.y = 9 * figure_scaler;
+cex_scale = 1.75 * figure_scaler;
+theme_set(theme_bw())
+
+```
+
+## Things to talk about
+
+- How I got to what I do today
+
+- What I do on a daily basis
+
+- Hands-on R project
+
+- Closing thoughts
+
+## High School (1998-2002) / College (2002-2006)
+
+- Took AP Calc but AP Stats not offered in my HS 
+
+- Double major in Mathematics / Political Science in college
+
+- Took two courses in Mathematical Statistics my senior year
+
+- Summer research project in Biostatistics after graduation
+
+## What is Biostatistics?
+
+- Application of statistical science to questions related to biology and public health, e.g. 
+
+    * What is the impact of smoking during pregnancy on the growth trajectory of an infant?
+    * Does this drug help cancer patients live longer?
+    * Which genes are over-expressed in people who have Type II diabetes?
+    * How does excess mortality due to Covid vary across countries?
+
+## Graduate school (2007-2012)
+
+- Studied Biostatistics at UM
+
+- Lots of course work in MS program (~12 Biostatistics or Statistics courses / ~8 courses in epidemiology, genetics, and public health)
+
+- Additional year of courses for PhD, then research and writing a dissertation
+
+## After graduate school 
+
+- Professor at UM 
+
+- My days / evenings consist of mix of:
+
+    * teaching classes
+    
+    * working and researching with graduate students
+    
+    * doing research
+    
+    * writing R code
+    
+## Some different projects I do: ECMO research
+
+```{r, echo = F, out.width="80%"}
+knitr::include_graphics("ecmo.png")
+```
+
+J Am Med Assoc. 2019;322(6):557-568.
+
+## ECMO for Covid
+
+```{r, echo = F, out.width="60%"}
+knitr::include_graphics("ecmo_covid1.png")
+```
+
+```{r, echo = F, out.width="80%", out.extra='style="float:right; padding:5px"'}
+knitr::include_graphics("ecmo_covid2.png")
+```
+
+- Patients with confirmed SARS-CoV2 infection, ages 16 years or older, started ECMO between Jan 16, 2020 and May 1, 2020
+
+- 1035 patients from 213 hospitals across 36 countries
+
+- Estimated 37% in-hospital mortality 90 days post-ECMO
+
+The Lancet. 2020;396:1071-1078
+
+## Cancer 
+
+Cancer drugs often harm the patient as well as the disease
+
+When new drugs are developed or new combinations are proposed, the right amount to give the patient is not known: too little may not be efficacious against the cancer and too much may be toxic for the patient. 
+
+```{r, echo = F, out.width="60%"}
+knitr::include_graphics("dose_escalation.png")
+```
+
+First-in-human trials will gradually increase the dose level of drug. 
+
+J Natl Cancer Inst. 2009 May 20; 101(10): 708–720. 
+
+## Technical research
+
+I sometimes get to write theorems:
+
+```{r, echo = F, out.width="100%"}
+knitr::include_graphics("fancy_theorem.png")
+```
+
+Biostatistics (2013); 14(2): 259–272
+
+# Generative AI
+
+## ChatGPT lies. Boldly.
+
+
+```{r, echo = F, out.width="50%"}
+knitr::include_graphics("chatgpt1.png")
+```
+```{r, echo = F, out.width="40%", out.extra='style="float:right; padding:5px"'}
+knitr::include_graphics("chatgpt2.png")
+```
+
+## 
+
+"While ChatGPT can write credible scientific essays, the data it generates is a mix of true and completely fabricated ones."
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9939079/
+
+## 
+
+```{r, echo = F, out.width="95%"}
+knitr::include_graphics("chatgpt3.png")
+```
+
+## ChatGPT loves fluffy words
+
+```{r, echo = F, out.width="95%"}
+knitr::include_graphics("chatgpt5.png")
+```
+
+## 
+
+```{r, echo = F, out.width="95%"}
+knitr::include_graphics("chatgpt6.png")
+```
+
+
+## 
+
+```{r, echo = F, out.width="95%"}
+knitr::include_graphics("chatgpt4.png")
+```
+
+- "Our results indicate that the largest and fastest growth was observed in Computer Science papers, with [the proportion of LLM-modified sentences] reaching 17.5% for abstracts and 15.3% for introductions by February 2024"
+
+https://arxiv.org/pdf/2404.01268
+
+
+
+## Misconceptions about statisticians I encounter
+
+- Statisticians are only p-value machines and sample size calculators
+
+- Statisticians can't help with study design or data collection
+
+- Statisticians don't care about the science
+
+- More data is always better
+
+## (bio)statisticians are always in demand
+
+## 
+
+```{r, echo = F, out.width="90%"}
+knitr::include_graphics("information_dataset.png")
+```
+
+## 
+
+```{r, echo = F, out.width="100%"}
+knitr::include_graphics("avg_male_height.png")
+```
+
+## 
+
+```{r, echo = F, out.width="100%"}
+knitr::include_graphics("lemon_intake.png")
+```
+
+
+## R project
+
+1. Respond to google form: https://tinyurl.com/salineapstats
+
+1. Go to posit.cloud
+
+2. Create a free account
+
+3. https://posit.cloud/content/4056824
+
+## Things you can do if you want to be a biostatistician
+
+- Go to college:
+
+    * If you want to stop with a bachelors, consider majoring
+    in statistics or data science
+    
+    * If you are thinking about graduate school, consider
+    majoring in mathematics
+    
+    * Hone written and oral communication skills
+    
+- Summer programs in Biostatistics
+
+    * https://sph.umich.edu/bdsi/
+    
+- Lots of free resources for learning to code:
+
+    * https://www.coursera.org/specializations/data-science-for-health-research
+    
+    * https://www.coursera.org/learn/r-programming
+    
+    * https://swcarpentry.github.io/r-novice-gapminder/
+    
+    
+  
