@@ -216,7 +216,7 @@ https://arxiv.org/pdf/2404.01268
 
 ##  
 
-### (Bio)statisticians are always in demand
+### There is still a need for biostatisticians
 
 ## 
 
@@ -241,13 +241,20 @@ knitr::include_graphics("images/lemon_intake.png")
 
 ###  R project
 
-1. Respond to google form: https://tinyurl.com/salineapstats
+1. Respond to google form: https://tinyurl.com/aapstats
 
 1. Go to posit.cloud
 
 2. Create a free account
 
 3. https://posit.cloud/content/4056824
+
+```{r}
+#for saline: https://tinyurl.com/salineapstats
+#for aaps: https://tinyurl.com/aapstats
+```
+
+
 
 ## 
 
