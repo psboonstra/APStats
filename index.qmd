@@ -2,7 +2,7 @@
 title: "Answers to questions about biostatistics"
 subtitle: "(that you've never even asked)"
 author: "Philip Boonstra"
-date: "May 12, 2025"
+date: "May 15, 2026"
 format: 
   revealjs:
     smaller: true
@@ -149,59 +149,6 @@ knitr::include_graphics("images/fancy_theorem.png")
 
 Biostatistics (2013); 14(2): 259–272
 
-# Generative AI
-
-##  
-
-### ChatGPT lies. Boldly.
-
-
-```{r, echo = F, out.width="50%"}
-knitr::include_graphics("images/chatgpt1.png")
-```
-```{r, echo = F, out.width="40%", out.extra='style="float:right; padding:5px"'}
-knitr::include_graphics("images/chatgpt2.png")
-```
-
-## 
-
-"While ChatGPT can write credible scientific essays, the data it generates is a mix of true and completely fabricated ones."
-
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9939079/
-
-## 
-
-```{r, echo = F, out.width="95%"}
-knitr::include_graphics("images/chatgpt3.png")
-```
-
-##  
-
-### ChatGPT loves fluffy words
-
-```{r, echo = F, out.width="95%"}
-knitr::include_graphics("images/chatgpt5.png")
-```
-
-## 
-
-```{r, echo = F, out.width="95%"}
-knitr::include_graphics("images/chatgpt6.png")
-```
-
-
-## 
-
-```{r, echo = F, out.width="95%"}
-knitr::include_graphics("images/chatgpt4.png")
-```
-
-- "Our results indicate that the largest and fastest growth was observed in Computer Science papers, with [the proportion of LLM-modified sentences] reaching 17.5% for abstracts and 15.3% for introductions by February 2024"
-
-https://arxiv.org/pdf/2404.01268
-
-
-
 ##  
 
 ### Misconceptions about statisticians I encounter
@@ -241,7 +188,7 @@ knitr::include_graphics("images/lemon_intake.png")
 
 ###  R project
 
-1. Respond to google form: https://tinyurl.com/aapstats
+1. Respond to google form: https://tinyurl.com/salineapstats
 
 1. Go to posit.cloud
 
