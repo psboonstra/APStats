@@ -167,15 +167,17 @@ Biostatistics (2013); 14(2): 259–272
 
 ## 
 
-```{r, echo = F, out.width="90%"}
-knitr::include_graphics("images/information_dataset.png")
+```{r, echo = F, out.width="100%"}
+knitr::include_graphics("images/avg_male_height.png")
 ```
 
 ## 
 
-```{r, echo = F, out.width="100%"}
-knitr::include_graphics("images/avg_male_height.png")
+```{r, echo = F, out.width="90%"}
+knitr::include_graphics("images/correlation.png")
 ```
+
+source: https://tylervigen.com/spurious/correlation/2751_ticket-sales-for-houston-astros-games_correlates-with_instructor-salaries-in-the-us
 
 ## 
 
